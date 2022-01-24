@@ -107,12 +107,11 @@ function mostrarStock() {
 }
 
 function controlarActivacionBotones() {
-    document.querySelector('#btnLess').disabled = false;
-    document.querySelector('#btnMore').disabled = false;
+    document.querySelectorAll('.btnLess, .btnMore').forEach(item => item.disabled = false);
     if (inicio == 0) {
-        document.querySelector('#btnLess').disabled = true;
+        document.querySelectorAll('.btnLess').forEach(item => item.disabled = true);
     } else if (inicio + cantidadVistas >= stock.length) {
-        document.querySelector('#btnMore').disabled = true;
+        document.querySelectorAll('.btnMore').forEach(item => item.disabled = true);
     }
 }
 
