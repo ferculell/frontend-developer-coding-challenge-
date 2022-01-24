@@ -1,4 +1,3 @@
-// Constructor de objetos para modelar los productos
 class Producto {
     constructor(id, nombre, imagen, precio) {
         this.id = id;
