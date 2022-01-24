@@ -72,21 +72,23 @@ function mostrarStock() {
             `;
         }
 
-        if (usuarioActual.puntos >= stock[i].precio) {
-            tarjeta.innerHTML += `
-            <div class="d-grid gap-2">
-                <button 
-                    class="btn btn-primary" 
-                    onclick="dispararRedeem(${stock[i].precio})"
-                >Comprar</button>
-            </div>
-            `;
-        } else {
-            tarjeta.innerHTML += `
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary" disabled>Te faltan $${stock[i].precio - usuarioActual.puntos}</button>
-            </div>
-            `;
+        if (stock[i]) {
+            if (usuarioActual.puntos >= stock[i].precio) {
+                tarjeta.innerHTML += `
+                <div class="d-grid gap-2">
+                    <button 
+                        class="btn btn-primary" 
+                        onclick="dispararRedeem(${stock[i].precio})"
+                    >Comprar</button>
+                </div>
+                `;
+            } else {
+                tarjeta.innerHTML += `
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" disabled>Te faltan $${stock[i].precio - usuarioActual.puntos}</button>
+                </div>
+                `;
+            }
         }
 
         // Enviamos cada tarjeta al contenedor
