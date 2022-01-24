@@ -130,3 +130,10 @@ function dispararRedeem(valor) {
     alert(`Te quedan $${usuarioActual.puntos} disponibles.`);
     mostrarStock();
 }
+
+function agregarPuntos() {
+    let valorSeleccionado = Number(document.querySelector('input[name="agregar"]:checked').value);
+    usuarioActual.agregarPuntos(valorSeleccionado);
+    alert(`Ahora tenés $${usuarioActual.puntos} disponibles.`);
+    mostrarStock();
+}

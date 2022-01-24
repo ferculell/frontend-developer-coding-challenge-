@@ -1,0 +1,17 @@
+input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"] + label {
+    border: 5px solid lightblue;
+    background-color: lightblue;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    line-height: 40px;
+  }
+  input[type="radio"]:checked + label {
+    border: 5px solid blue;
+    background-color: dodgerblue;
+  }
