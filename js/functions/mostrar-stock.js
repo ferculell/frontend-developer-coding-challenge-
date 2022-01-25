@@ -33,7 +33,7 @@ function mostrarStock() {
                 tarjeta.innerHTML += `
                 <div class="d-grid gap-2">
                     <button 
-                        class="btn btn-primary" 
+                        class="btn-redeem color-brand" 
                         onclick="dispararRedeem(${stock[i].precio})"
                     >Comprar</button>
                 </div>
@@ -41,7 +41,7 @@ function mostrarStock() {
             } else {
                 tarjeta.innerHTML += `
                 <div class="d-grid gap-2">
-                    <button class="btn btn-primary" disabled>Te faltan $${stock[i].precio - usuarioActual.puntos}</button>
+                    <button class="btn-redeem color-disabled" disabled>Te faltan $${stock[i].precio - usuarioActual.puntos}</button>
                 </div>
                 `;
             }

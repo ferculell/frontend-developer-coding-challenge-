@@ -1,17 +1,40 @@
+
+
 input[type="radio"] {
-    display: none;
-  }
-  input[type="radio"] + label {
-    border: 5px solid lightblue;
-    background-color: lightblue;
-    cursor: pointer;
-    display: block;
-    height: 40px;
-    width: 200px;
-    text-align: center;
-    line-height: 40px;
-  }
-  input[type="radio"]:checked + label {
-    border: 5px solid blue;
-    background-color: dodgerblue;
-  }
+  display: none;
+}
+input[type="radio"] + label {
+  background-color: #E5F0FF;
+  cursor: pointer;
+  display: block;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 12px;
+}
+input[type="radio"]:checked + label {
+  color: white;
+  background-image: linear-gradient(to right, #1667D9, #F279F2);
+}
+
+.btn-redeem {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+}
+
+.color-brand {
+  color: white;
+  background-image: linear-gradient(to right, #176FEB, #FF80FF);
+}
+
+.color-brand:hover {
+  color: white;
+  background-image: linear-gradient(to right, #1667D9, #F279F2);
+}
+
+.color-disabled {
+  color: #7C899C;
+  background-color: #E6EDF7;
+}
