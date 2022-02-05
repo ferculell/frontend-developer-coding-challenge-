@@ -19,16 +19,6 @@ function mostrarStock() {
                 </div>
             </div>
             `;
-        } else {
-            tarjeta.innerHTML = `
-            <img class="card-img-top" src="./img/imagen-producto.jpg" alt="Placeholder" style="width:100%">
-            <div class="card-body">
-                <h4 class="card-title">No hay más productos</h4>
-            </div>
-            `;
-        }
-
-        if (stock[i]) {
             if (usuarioActual.puntos >= stock[i].precio) {
                 tarjeta.innerHTML += `
                 <div class="d-grid gap-2">
@@ -45,6 +35,13 @@ function mostrarStock() {
                 </div>
                 `;
             }
+        } else {
+            tarjeta.innerHTML = `
+            <img class="card-img-top" src="./img/imagen-producto.jpg" alt="Placeholder" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">No hay más productos</h4>
+            </div>
+            `;
         }
 
         // Enviamos cada tarjeta al contenedor
