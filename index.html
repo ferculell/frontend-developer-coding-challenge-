@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aerolab Frontend Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
@@ -12,23 +15,67 @@
 </head>
 <body>
     <div class="container">
-        <nav>
-            <img src="./assets/icons/aerolab-logo-1.svg" alt="Aerolab Logo">
-            <div id="aero-coins">
-                <img src="./assets/icons/aeropay-1.svg">
-                <p></p>
+
+        <nav class="row align-items-center p-4">
+            <div class="col-2">
+                <img src="./assets/icons/aerolab-logo-1.svg" alt="Aerolab Logo">
+            </div>
+            <div class="col-2 offset-8">
+                <div id="aero-coins" class="row">
+                    <div class="col-4">
+                        <img src="./assets/icons/aeropay-1.svg">
+                    </div>
+                    <div class="col-4">
+                        <h6>1200</h6>
+                    </div>
+                    <div class="col-4">
+                        <img src="./assets/icons/chevron-default.svg">
+                    </div>
+                </div>
             </div>
         </nav>
-        <h1>Aerolab</h1>
+        <div id="aeropay" class="row justify-content-center">
+            <div class="row">
+                <h6>Add Balance</h6>
+            </div>
+            <div class="row">
+                <div id="aerocard">
+                    Aerocard ...
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <input id="add1000" type='radio' name="agregar" value="1000">
+                    <label for="add1000">1000</label>
+                </div>
+                <div class="col-4">
+                    <input id="add5000" type='radio' name="agregar" value="5000">
+                    <label for="add5000">5000</label>
+                </div>
+                <div class="col-4">
+                    <input id="add7500" type='radio' name="agregar" value="7500">
+                    <label for="add7500">7500</label>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn-cta" onclick="agregarPuntos()">
+                    <span><img src="./assets/icons/aeropay-3.svg"></span>Add Points
+                </button>
+            </div>
+        </div>
 
-        <input id="add1000" type='radio' name="agregar" value="1000">
-        <label for="add1000">1000</label>
-        <input id="add5000" type='radio' name="agregar" value="5000">
-        <label for="add5000">5000</label>
-        <input id="add7500" type='radio' name="agregar" value="7500">
-        <label for="add7500">7500</label>
-
-        <button class="btn btn-secondary" onclick="agregarPuntos()">Agregar Puntos</button>
+        <div id="hero" class="row align-items-center">
+            <div class="col-6">
+                <h6>EXPLORE THE</h6>
+                <h1><span id="tech" class="gradient-text">Tech</span><br>Zone</h1>
+                <h6>Here you’ll be able to exchange all of your hard-earned<br> 
+                    Aeropoints and exchange them for cool tech.</h6>
+                <button class="color-brand">VIEW ALL PRODUCTS</button>
+            </div>
+            <div class="col-6">
+                <img class="responsive" src="./assets/illustrations/hero-desktop.png" alt="" srcset="">
+            </div>
+        </div>
 
         <h3>TECH PRODUCTS</h3>
         <button class="btn btn-secondary btnLess" onclick="retrocederPagina()"> < </button>

@@ -9,7 +9,7 @@ function agregarPuntos() {
 }
 
 function actualizarPuntos() {
-    document.querySelector('#aero-coins p').innerText = usuarioActual.puntos;
+    document.querySelector('#aero-coins h6').innerText = usuarioActual.puntos;
 }
 
 export { agregarPuntos, actualizarPuntos };
